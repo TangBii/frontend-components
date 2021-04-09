@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 60%;
+  height: 60%;
+}
+
+.form-container {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #eee;
+
+  transform: translateX(0);
+  transition: all 0.6s ease-out;
+}
+
+.login-container {
+  z-index: 2;
+}
+
+.register-container {
+  opacity: 0;
+  z-index: 1;
+}
+
+.overlay-container {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: orangered;
+  overflow: hidden;
+  z-index: 100;
+
+  transform: translateX(0);
+  transition: transform 0.6s ease-out;
+}
+
+.overlay {
+  position: relative;
+  width: 200%;
+  height: 100%;
+  
+  transform: translateX(-50%);
+  transition: transform 0.6s ease-out;
+
+}
+
+.overlay-panel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+
+  transition: transform 0.6s ease-out;
+}
+
+.overlay-left {
+  left: 0;
+
+  transform: translateX(-20%);
+}
+
+.overlay-right {
+  right: 0;
+
+  transform: translateX(0);
+}
+
+
+/* register 和 login 移动到右侧 */
+.container.right-panel-active .form-container {
+  transform: translateX(100%);
+}
+
+/* 提升 register 层级 */
+.container.right-panel-active .register-container {
+  opacity: 1;
+  z-index: 3;
+}
+
+/* overlay-container 移动到左侧 */
+.container.right-panel-active .overlay-container {
+  transform: translateX(-100%);
+}
+
+/* 取消 overlay 向左的偏移 */
+.container.right-panel-active .overlay {
+  transform: translateX(0);
+}
+
+/* 取消 overlay-left 向左的偏移 */
+.container.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+/* overlay-right 向右偏移 */
+.container.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
