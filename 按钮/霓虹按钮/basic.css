@@ -1,0 +1,28 @@
+* {
+  font-family: '微软雅黑', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #050801;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 0 50px;
+  color: #03e9f4;
+  text-decoration: none;
+  overflow: hidden;
+  letter-spacing: 4px;
+}
+
+a:hover {
+  background: #03e9f4;
+  color: #050801;
+}
