@@ -15,6 +15,11 @@ label {
   transition: all 0.2s ease-out;
 }
 
+input:valid + label {
+  color: #acacac;
+  top: -50px;
+  background-color: #fff;
+}
 
 input:focus {
   outline: none;
@@ -26,3 +31,4 @@ input:focus + label {
   top: -50px;
   background-color: #fff;
 }
+

@@ -68,11 +68,18 @@ a {
   width: 100%;
 }
 
+
+
 .form-container label{
   position: relative;
   top: -40px;
   color: #acacac;
   transition: all 0.2s ease-out;
+}
+
+.form-container input:valid + label {
+  top: -62px;
+  background-color: #fff;
 }
 
 .form-container input:focus {
